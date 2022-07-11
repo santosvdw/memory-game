@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.2;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    color: slateblue;
+    font-style: italic;
+}
+
+header {
+    text-align: center;
+    margin-top: 40px;
+}
+
+td {
+    outline: 1px solid black;
+    padding: 0;
+    height: min-content;
+}
+
+section.game {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+td img {
+    max-width: 15vw;
+}
