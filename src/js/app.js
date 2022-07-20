@@ -5,7 +5,7 @@ card3 = document.querySelector('#card_4');
 card4 = document.querySelector('#card_5');
 card5 = document.querySelector('#card_6');
 let cards = [card0, card1, card2, card3, card4, card5];
-// Im going to france :DD
+
 let cardPics = {
     url1: 'https://thumbs.dreamstime.com/b/cute-cat-portrait-square-photo-beautiful-white-closeup-105311158.jpg',
     url2: 'https://play-lh.googleusercontent.com/6f6MrwfRIEnR-OIKIt_O3VdplItbaMqtqgCNSOxcfVMCKGKsOdBK5XcI6HZpjssnB2Y',
