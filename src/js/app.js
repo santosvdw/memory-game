@@ -87,8 +87,6 @@ let waitForClick = () => {
 
 let displayClickedCard = (num) => {
     cards[num].classList.remove('hidden');
-    clickedCardId.push(cards[num]);
-    console.log(clickedCardId);
     checkForSet(num);
 };
 
@@ -96,6 +94,7 @@ let checkForSet = (num) => {
     clickedCards.push(cards[num].innerHTML);
     clickedCardId.push(cards[num]);
     console.log(clickedCards);
+    console.log(clickedCardId);
 
     if (clickedCards.length == 2) {
         if (clickedCards[0] == clickedCards[1]) {
@@ -108,18 +107,13 @@ let checkForSet = (num) => {
             }
         } else {
             console.log('no set');
-            hideClickedCard(0, 1);
+            hideClickedCard();
         }
     }
 };
 
-let hideClickedCard = (one, two) => {
+let hideClickedCard = () => {
     console.log(clickedCards);
-    clickedCardId[one].classList.add('hidden');
-    setTimeout(console.log('slay'), 1000);
-    // clickedCardId[two].classList.add('hidden');
-    clickedCardId = [];
-    clickedCards = [];
     waitForClick();
 };
 
@@ -129,11 +123,19 @@ let displayWinButton = () => {
 };
 
 let resetGame = () => {
-    wins += 1;
+    resetVariables();
     for (let i = 0; i < clickedCardId.length; i++) {
         clickedCardId[i].classList.add('hidden');
     }
-    location.reload();
+    renderCards();
+};
+
+let resetVariables = () => {
+    clickedCards = [];
+    clickedCardId = [];
+    wonGame = false;
+    wins = 0;
+    completedSets = [];
 };
 
 window.onload = () => {
