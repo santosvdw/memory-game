@@ -43,15 +43,32 @@ td {
     outline: 1px solid black;
     padding: 0;
     height: min-content;
+    width: 15vw;
 }
 
 section.game {
     display: flex;
-    width: 100vw;
-    justify-content: center;
+    width: 45vw;
+    align-items: center;
+    margin: 0 auto;
+    flex-flow: column wrap;
     margin-top: 40px;
 }
 
 td img {
     max-width: 15vw;
+    position: relative;
+    z-index: -1;
+}
+
+td.hidden {
+    background-color: rgba(128, 0, 0, 0.404);
+}
+
+button.win_btn {
+    display: none;
+}
+
+button.win_btn.shown {
+    display: block;
 }
